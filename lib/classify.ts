@@ -1,4 +1,5 @@
 import type { ClassificacaoFinanceira, Cobranca } from "@/types/financial";
+
 import { cleanText, normalizeStatus } from "./normalize";
 import { daysLateFromDueDate } from "./utils";
 

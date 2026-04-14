@@ -59,10 +59,16 @@ export function getField(
   row: Record<string, unknown>,
   labels: string[],
 ): string {
-  const normalizedLabels = new Set(labels.map(normalizeHeader));
-  const entry = Object.entries(row).find(([key]) =>
-    normalizedLabels.has(normalizeHeader(key)),
-  );
+  for (const label of labels) {
+    const normalizedLabel = normalizeHeader(label);
+    const entry = Object.entries(row).find(
+      ([key]) => normalizeHeader(key) === normalizedLabel,
+    );
 
-  return cleanText(entry?.[1]);
+    if (entry) {
+      return cleanText(entry[1]);
+    }
+  }
+
+  return "";
 }

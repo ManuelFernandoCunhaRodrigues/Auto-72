@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
+
 import { LoadingState } from "@/components/LoadingState";
 import { ResultCard } from "@/components/ResultCard";
 import { StatusAlert } from "@/components/StatusAlert";

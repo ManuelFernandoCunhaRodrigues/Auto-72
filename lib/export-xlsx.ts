@@ -1,4 +1,5 @@
 import ExcelJS from "exceljs";
+
 import type {
   CategoriaFinal,
   RegistroFinal,

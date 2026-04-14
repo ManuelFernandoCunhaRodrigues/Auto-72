@@ -4,6 +4,7 @@ import type {
   RegistroFinal,
   RelatorioProcessado,
 } from "@/types/financial";
+
 import { classifyFinancialStatus } from "./classify";
 import { cleanText, normalizeName, normalizePhone } from "./normalize";
 import { compareBrazilianDatesDesc } from "./utils";
